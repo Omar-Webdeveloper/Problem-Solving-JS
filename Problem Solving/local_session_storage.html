@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> The localStorage read-only property of the window interface allows
+      you to access a Storage object for the Document's origin;
+      the stored data is saved across browser sessions. </p>
+
+    <!-- The localStorage object allows you to save key/value pairs in the browser. -->
+
+     <!-- The localStorage object stores data with no expiration date.
+     he data is not deleted when the browser is closed, and are available for future sessions. -->
+     <H3>Saved item</H3>
+     <p id="demo"></p>
+
+     <script>
+     // Set Item
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("demo").innerHTML = localStorage.getItem("lastname");
+    localStorage.clear();
+
+</script>
+</body>
+</html>

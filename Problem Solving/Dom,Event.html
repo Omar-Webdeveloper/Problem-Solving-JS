@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <!-- id
+    <div id="test">hello</div>
+    <div id="test">hello2</div> -->
+
+
+     <!-- tag name -->
+    <!-- <p>this is p1</p>
+    <p>this is p2</p>
+    <p>this is p3</p> -->
+
+    <!--class name-->
+    <!-- <div class="test">hello1</div>
+    <div class="test">hello2</div>
+    <p class="test">this is p</p> -->
+
+    <!-- selector-->
+    <!-- <div class="test">hello1</div>
+    <div class="test">hello2</div>
+    <p class="test">this is p</p>  -->
+
+    <script>
+        // var myDiv=document.getElementById("test");
+        // myDiv.innerHTML='changed by js';
+
+        // var myElements=document.getElementsByTagName('p');
+        // myElements[0].innerHTML='p1 changed by js';
+
+        // var myElements=document.getElementsByClassName('test');
+        // myElements[0].innerHTML='div1 changed by js';
+        // myElements[1].innerHTML='div2 changed by js';
+
+        // var myElements=document.querySelectorAll('.test');
+        // var myElements=document.querySelectorAll('div.test');
+        // myElements[1].innerHTML="changed by js";
+
+    </script>
+
+
+
+    <!-- to cahnge color and background color for text on click -->
+    <!-- <h3 onclick="change_c_b(this, 'blue', 'gray')">Click me to change my text and background colors.</h3> -->
+
+    <!-- to change background color for button on click  -->
+    <!-- <button style="border: 1px 1px;" onclick="change_b(this)">click me</button> -->
+
+
+
+    <!-- to make the image bigger on hover -->
+    <!-- <img src="smile.jpg" onmouseover="scale_img(this)"> -->
+
+
+    <!-- to make the image bigger on hover and return to original size when unhover -->
+    <!-- <img src="smile.jpg" onmouseover="scale_img(this)", onmouseout="rescale_img(this)"> -->
+     
+    <!-- to change the image on hover -->
+    <!-- <img src="smile.jpg" height="200px" width="200px" onmouseover="change_img(this, 'more_smile.png')" ,
+        onmouseout="change_img(this, 'smile.jpg')"> -->
+
+    <script>
+        function change_c_b(element, text_color, background_color) {
+
+element.style.color = text_color;
+element.style.background = background_color;
+
+
+}
+
+function change_b(element){
+element.style.background="green";
+}
+
+function scale_img(element){
+element.style.scale=1.5;
+}
+
+function rescale_img(element){
+element.style.scale=0.75;
+}
+
+function change_img(source_image, new_src) {
+source_image.src = new_src;
+}
+    </script>
+</body>
+
+</html>

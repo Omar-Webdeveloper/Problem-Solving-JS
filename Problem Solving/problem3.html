@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+        function odds_evens(num1,num2){
+            count_odd =  0
+            count_even =  0
+            for(let i =num1;i<=num2;i++){
+
+                if(i%2==1){count_odd+=i;}
+
+                else if (i%2==0) {count_even+=i;}
+
+                 else {console.log("nothing")}
+            }
+            console.log(count_odd);
+            console.log(count_even);
+        }
+        odds_evens(1,5)
+
+        function big_num(n1,n2,n3){
+            if (n1 > n2 && n1 > n3)
+            {
+                console.log("bigger number"+n1);
+            }
+            if(n2 > n1 && n2 > n3)
+            {
+            console.log("bigger number"+n2);
+            }
+            if(n3 > n2 && n3 > n1)
+            {                
+            console.log("bigger number"+n3);
+            }
+
+        }
+        big_num(1,2,3)
+    </script>
+</body>
+</html>
