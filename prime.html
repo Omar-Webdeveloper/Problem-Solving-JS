@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prime Number Checker</h1>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="checkPrime()">Check</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkPrime() {
+            let n = parseInt(document.getElementById('numberInput').value);
+            let isPrime = true;
+
+            if (n <= 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i < n; i++) {
+                    if (n % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            document.getElementById('result').innerText = isPrime ? `${n} is a prime number.` : `${n} is not a prime number.`;
+        }
+    </script>
+    <script>
+function isPrime(num) {
+            prime = true;
+
+            if (num <= 1 || num == 4 || num == 6 || num == 8 || num == 10 )
+                prime = false;
+
+            else if (num == 2 || num == 3 || num == 5 || num == 7|| num == 9 )
+                prime = true;
+
+            else {
+                if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0|| num % 9  == 0)
+                    prime = false;
+                else
+                    prime = true;
+            }
+
+            console.log(prime);
+        }
+
+        isPrime(17 * 13);
+    </script>
+</body>
+</html>
